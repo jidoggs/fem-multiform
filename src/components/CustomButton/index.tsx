@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import React from "react";
+import clsx from "clsx";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "done" | "return";
@@ -20,10 +20,10 @@ function CustomButton({
         {...props}
         disabled={disabled || isloading}
         className={clsx(
-          "px-6 py-4 rounded-lg font-medium text-base",
-          !variant ? "bg-themeNavyBlue text-white" : "",
-          variant === "done" ? "bg-themeBlue text-white" : "",
-          variant === "return" ? "p-0 text-gray-10 rounded-none" : "",
+          "font-medium text-sm lg:text-base",
+          !variant ? "bg-themeNavyBlue" : "",
+          variant === "done" ? "bg-themeBlue" : "",
+          variant === "return" ? "text-themeGray-10" : "px-4 py-3 lg:px-6 lg:py-4 rounded lg:rounded-lg text-white",
           className
         )}
       >

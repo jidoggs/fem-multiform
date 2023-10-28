@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -15,6 +15,11 @@ module.exports = {
           30: "#F0F6FF",
           40: "#FAFBFF",
         },
+      },
+      backgroundImage: {
+        check: "url('/src/assets/icon-checkmark.svg')",
+        navDesktop: "url('/src/assets/bg-sidebar-desktop.svg')",
+        navMobile: "url('/src/assets/bg-sidebar-mobile.svg')",
       },
     },
   },
