@@ -1,37 +1,22 @@
 import CustomSectionTitle from "../CustomSectionTitle";
 import AddOnCard from "../AddOnCard";
+import { addOnsInfo } from "../../helpers";
 
-type Props = {};
+const { cards, pageInfo } = addOnsInfo;
 
-function PickAddOns({}: Props) {
+function PickAddOns() {
   return (
     <div className="flex flex-col gap-y-7">
-      <CustomSectionTitle
-        title="Pick add-ons"
-        sub="Add-ons help enhance your gaming experience."
-      />
+      <CustomSectionTitle title={pageInfo.title} sub={pageInfo.sub} />
       <div className="flex flex-col gap-y-3">
-        <AddOnCard
-          bundle="yr"
-          isChecked
-          price={10}
-          sub="Access to multiplayer games"
-          title="Online service"
-        />
-        <AddOnCard
-          bundle="yr"
-          isChecked
-          price={10}
-          sub="Access to multiplayer games"
-          title="Online service"
-        />
-        <AddOnCard
-          bundle="yr"
-          isChecked={false}
-          price={10}
-          sub="Access to multiplayer games"
-          title="Online service"
-        />
+        {cards.map((itm) => (
+          <AddOnCard
+            key={itm.type}
+            sub={itm.sub}
+            title={itm.title}
+            type={itm.type}
+          />
+        ))}
       </div>
     </div>
   );

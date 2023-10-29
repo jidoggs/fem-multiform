@@ -31,10 +31,10 @@ function CustomNav({ current }: Props) {
           <div className="flex gap-x-4 text-white items-center">
             <div
               className={clsx(
-                "w-8 h-8 rounded-full bg-transparent border flex items-center justify-center border-white py-2 px-3 font-bold",
+                "w-8 h-8 rounded-full border flex items-center justify-center py-2 px-3 font-bold",
                 current === position || (current === 5 && position === 4)
-                  ? "text-themeNavyBlue bg-white/40 border-transparent"
-                  : ""
+                  ? "text-themeNavyBlue bg-themePurple border-themePurple"
+                  : "bg-transparent border-white"
               )}
             >
               {position}

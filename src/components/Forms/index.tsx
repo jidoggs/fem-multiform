@@ -1,9 +1,9 @@
+import clsx from "clsx";
 import PersonalInfo from "./PersonalInfo";
 import SelectPlan from "./SelectPlan";
 import PickAddOns from "./PickAddOns";
 import FinishingUp from "./FinishingUp";
 import Completed from "./Completed";
-import clsx from "clsx";
 
 type Props = {
   current: number;

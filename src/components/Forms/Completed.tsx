@@ -1,14 +1,26 @@
+import { useContext, useEffect } from "react";
 import icon from "../../assets/icon-thank-you.svg";
+import { DataContext } from "../../AppContext";
+import { ContextData } from "../../types";
 
-type Props = {};
+function Completed() {
+  const { resetDataHandler } = useContext(DataContext) as ContextData;
+  useEffect(() => {
+    let timed = setTimeout(() => {
+      resetDataHandler();
+    }, 5000);
 
-function Completed({}: Props) {
+    return () => {
+      clearTimeout(timed);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col gap-y-6 items-center py-12" >
+    <div className="flex flex-col gap-y-6 items-center py-12">
       <img src={icon} alt="completed" className="w-14 h-14" />
-      <div className="flex flex-col gap-y-2.5 items-center" >
-        <h1 className="font-bold text-2xl text-themeNavyBlue" >Thank you!</h1>
-        <p className="text-center text-base font-medium text-themeGray-10" >
+      <div className="flex flex-col gap-y-2.5 items-center">
+        <h1 className="font-bold text-2xl text-themeNavyBlue">Thank you!</h1>
+        <p className="text-center text-base font-medium text-themeGray-10">
           Thanks for confirming your subscription! We hope you have fun using
           our platform. If you ever need support, please feel free to email us
           at support@loremgaming.com
