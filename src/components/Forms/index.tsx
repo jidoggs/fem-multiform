@@ -33,8 +33,8 @@ function Form({ current }: Props) {
   return (
     <div
       className={clsx(
-        "absolute -top-[4.5rem] left-4 right-4 bg-white py-8 rounded-lg",
-        current > 4 ? "px-[18px]" : "px-6"
+        "absolute -top-[4.5rem] left-4 right-4 bg-white py-8 rounded-lg  md:static md:h-full md:p-0",
+        current > 4 ? "px-[18px]" : "px-6 "
       )}
     >
       {template}

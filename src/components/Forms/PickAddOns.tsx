@@ -6,9 +6,9 @@ const { cards, pageInfo } = addOnsInfo;
 
 function PickAddOns() {
   return (
-    <div className="flex flex-col gap-y-7">
+    <div className="flex flex-col gap-y-7 md:gap-y-10">
       <CustomSectionTitle title={pageInfo.title} sub={pageInfo.sub} />
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 md:gap-y-4">
         {cards.map((itm) => (
           <AddOnCard
             key={itm.type}

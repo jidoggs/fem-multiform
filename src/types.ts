@@ -43,6 +43,7 @@ export type IplansInfo = PageInfo<
 >;
 
 export type iHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => void;
+export type iHandleBlur = (e: React.FocusEvent<HTMLInputElement>) => void;
 export type iHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => void;
 export type iSelectPlanChange = (i: Plan) => void;
 export type iBundleHandler = (i: Bundle) => void;

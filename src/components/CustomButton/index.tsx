@@ -20,10 +20,10 @@ function CustomButton({
         {...props}
         disabled={disabled || isloading}
         className={clsx(
-          "font-medium text-sm lg:text-base",
-          !variant ? "bg-themeNavyBlue" : "",
+          "font-medium text-sm md:text-base cursor-pointer leading-none md:leading-none",
+          !variant ? "bg-themeNavyBlue hover:bg-[#174A8B]" : "",
           variant === "done" ? "bg-themeBlue" : "",
-          variant === "return" ? "text-themeGray-10" : "px-4 py-3 lg:px-6 lg:py-4 rounded lg:rounded-lg text-white",
+          variant === "return" ? "text-themeGray-10 hover:text-themeNavyBlue" : "px-4 py-3 md:px-6 md:py-4 rounded md:rounded-lg text-white",
           className
         )}
       >

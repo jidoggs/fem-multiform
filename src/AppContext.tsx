@@ -23,7 +23,7 @@ function AppContext({ children }: Props) {
   };
   const nextStepHandler:iHandleSubmit = (e) => {
     e.preventDefault();
-    
+    console.log(e,"event")
     setInData((prev) => ({ ...prev, step: prev.step + 1 }));
   };
   const changePlanHandler = () => {

@@ -24,10 +24,10 @@ function CustomBundleCard({ logo, title }: Props) {
   return (
     <div
       className={clsx(
-        "p-4 pb-5 border rounded-lg flex items-start gap-x-3.5 lg:flex-col gap-y-11 cursor-pointer",
+        "p-4 pb-5 border rounded-lg flex items-start gap-x-3.5 md:flex-col gap-y-11 cursor-pointer md:flex-1",
         isSelected
           ? "border-themeBlue bg-themeGray-40"
-          : "border-themeGray-20 bg-white"
+          : "border-themeGray-20 bg-white hover:border-themeBlue"
       )}
       onClick={clickHandler}
     >

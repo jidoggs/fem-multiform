@@ -8,12 +8,12 @@ function PersonalInfo() {
   const { data, changeHandler } = useContext(DataContext) as ContextData;
   const personalData = data.personalData;
   return (
-    <div className="flex flex-col gap-y-6">
+    <div className="flex flex-col gap-y-6 md:gap-y-10">
       <CustomSectionTitle
         title="Personal info"
         sub="Please provide your name, email address, and phone number."
       />
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 md:gap-y-6">
         <CustomInput
           name="name"
           placeholder="e.g. Stephen King"

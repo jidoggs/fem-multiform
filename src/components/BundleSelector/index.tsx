@@ -16,7 +16,7 @@ function Button({ value, name, children, ...props }: iButton) {
       name={name}
       type="button"
       className={clsx(
-        "text-sm font-medium capitalize p-0 border-none",
+        "text-sm font-medium md:font-normal capitalize p-0 border-none",
         value === name ? "text-themeNavyBlue" : "text-themeGray-10"
       )}
     >
@@ -38,7 +38,7 @@ function BundleSelector({ ...props }: Props) {
   };
 
   return (
-    <div className="flex items-center justify-center gap-x-6 pt-3.5 pb-3 px-14 w-full rounded-xl bg-[#D9D9D9]">
+    <div className="flex items-center justify-center gap-x-6 pt-3.5 pb-3 px-14 md:py-3.5 w-full rounded-xl bg-themeGray-40">
       <Button onClick={clickHandler} value={bundle} name="monthly">
         Monthly
       </Button>

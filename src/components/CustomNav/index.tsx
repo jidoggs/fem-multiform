@@ -1,31 +1,13 @@
 import clsx from "clsx";
+import { steps } from "../../helpers";
 
 type Props = {
   current: number;
 };
 
-const steps = [
-  {
-    position: 1,
-    name: "YOUR INFO",
-  },
-  {
-    position: 2,
-    name: "SELECT PLAN",
-  },
-  {
-    position: 3,
-    name: "ADD-ONS",
-  },
-  {
-    position: 4,
-    name: "SUMMARY",
-  },
-];
-
 function CustomNav({ current }: Props) {
   return (
-    <ul className="lg:w-[17.125rem] w-full lg:h-[568px] lg:pt-10 lg:px-8 pt-8 pb-[6.75rem] bg-navMobile bg-no-repeat bg-cover lg:bg-navDesktop flex items-center justify-center gap-x-4 lg:flex-col gap-y-8 ">
+    <ul className="lg:w-[17.125rem] w-full md:w-32 md:h-full lg:h-[568px] lg:pt-10 lg:px-8 pt-8 pb-[6.75rem] bg-navMobile bg-no-repeat bg-cover md:bg-navDesktop flex items-center justify-center gap-x-4 md:flex-col gap-y-8 lg:justify-start lg:items-start">
       {steps.map(({ name, position }) => (
         <li key={position}>
           <div className="flex gap-x-4 text-white items-center">

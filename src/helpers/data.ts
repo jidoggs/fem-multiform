@@ -5,6 +5,25 @@ import pro from "../assets/icon-pro.svg";
 
 export const FULL_YEAR_DISCOUNT = 10;
 
+export const steps = [
+  {
+    position: 1,
+    name: "YOUR INFO",
+  },
+  {
+    position: 2,
+    name: "SELECT PLAN",
+  },
+  {
+    position: 3,
+    name: "ADD-ONS",
+  },
+  {
+    position: 4,
+    name: "SUMMARY",
+  },
+];
+
 export const amountData = {
   plan: {
     arcade: 9,
